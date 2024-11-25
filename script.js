@@ -43,3 +43,69 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.addEventListener("DOMContentLoaded", () => typeEffect());
+
+
+    const projects = document.querySelectorAll('.project');
+    let currentIndex = 0;
+    
+    function updateProjects() {
+      projects.forEach((project, index) => {
+        project.classList.remove('active');
+        if (index === currentIndex) {
+          project.classList.add('active');
+        }
+      });
+    
+      const offset = -currentIndex * 100; // Adjust slider position
+      document.querySelector('.projects').style.transform = `translateX(${offset}%)`;
+    }
+    
+    function nextProject() {
+      currentIndex = (currentIndex + 1) % projects.length;
+      updateProjects();
+    }
+    
+    function prevProject() {
+      currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+      updateProjects();
+    }
+    
+    // Auto-switch every 5 seconds
+    let autoSwitch = setInterval(nextProject, 4000);
+    
+    // Allow swiping with buttons or swipe gestures
+    document.querySelector('.gallery').addEventListener('touchstart', handleTouchStart);
+    document.querySelector('.gallery').addEventListener('touchmove', handleTouchMove);
+    
+    let x1 = null;
+    function handleTouchStart(event) {
+      x1 = event.touches[0].clientX;
+    }
+    
+    function handleTouchMove(event) {
+      if (!x1) return;
+    
+      let x2 = event.touches[0].clientX;
+      let diff = x1 - x2;
+    
+      if (diff > 0) nextProject();
+      else prevProject();
+    
+      x1 = null;
+    }
+    
+    // Add navigation buttons (optional)
+    // document.querySelector('.gallery').insertAdjacentHTML('beforeend', `
+    //   <button class="prev">‹</button>
+    //   <button class="next">›</button>
+    // `);
+    
+    // document.querySelector('.prev').addEventListener('click', prevProject);
+    // document.querySelector('.next').addEventListener('click', nextProject);
+    
+    // Pause auto-switch on manual action
+    // document.querySelector('.gallery').addEventListener('mouseover', () => clearInterval(autoSwitch));
+    // document.querySelector('.gallery').addEventListener('mouseleave', () => {
+    //   autoSwitch = setInterval(nextProject, 5000);
+    // });
+    
