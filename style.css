@@ -182,7 +182,7 @@
    }
    
    .content h1 span {
-    color: #e43f5a;
+    color: #f12446;
    }
    
    .content h2 {
@@ -191,14 +191,14 @@
    }
    
    .dynamic-text {
-    color: #e43f5a;
-    border-right: 2px solid #e43f5a;
+    color: #f12446;
+    border-right: 2px solid #f12446;
     animation: blink 0.7s step-end infinite alternate;
    }
    
    @keyframes blink {
     from {
-     border-right-color: #e43f5a;
+     border-right-color: #f12446;
     }
     to {
      border-right-color: transparent;
@@ -221,7 +221,7 @@
    .portfolio-btn {
     margin-top: 15px;
     padding: 15px 30px;
-    background: linear-gradient(135deg, #691c29, #e43f5a);
+    background: linear-gradient(135deg, #64111f, #f12446);
     border: none;
     border-radius: 30px; /* Rounded button */
     color: #ffffff;
@@ -234,8 +234,8 @@
    
    .portfolio-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(228, 63, 90, 0.6);
-    background: linear-gradient(135deg, #f75d77, #e43f5a);
+    box-shadow: 0 8px 20px rgba(218, 44, 73, 0.6);
+    background: linear-gradient(135deg, #f32f50, #ec2b4b);
    }
    
    .avatar {
@@ -246,7 +246,7 @@
    .avatar img {
     max-width: 320px; /* Prevent the image from being too small */
     border-radius: 50%; /* Circular shape */
-    border: 5px solid #e43f5a; /* Add a border */
+    border: 5px solid #f12446; /* Add a border */
     object-fit: contain; /* Ensures the image fits well */
    }
    
@@ -314,7 +314,7 @@
     font-size: 2.5rem;
     text-align: center;
     padding:15px;
-    color: #e43f5a; /* Accent color */
+    color: #f12446; /* Accent color */
    }
    
    .about-content {
@@ -337,7 +337,7 @@
     height: 250px; /* Set the same height */
     border-radius: 50%; /* Makes it circular */
     object-fit: cover; /* Ensures the image fits inside the circle */
-    border: 5px solid #e43f5a; /* Add a border */
+    border: 5px solid #f12446; /* Add a border */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
    }
    
@@ -350,18 +350,18 @@
    .about-text h3 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #e43f5a;
+    color: #ffffff;
    }
    
    .about-text p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin: 10px 0;
-    color: #ddd; /* Softer text */
+    color: #ffffff; /* Softer text */
    }
    
    strong {
-    color: #e43f5a; /* Highlight important text */
+    color: #f12446; /* Highlight important text */
    }
    
    /* Social Section (within About) */
@@ -372,7 +372,7 @@
      .social-title {
        font-size: 2rem;
        margin-bottom: 10px;
-       color: #e43f5a; 
+       color: #f12446; 
      }
      
      .social-icons {
@@ -494,7 +494,7 @@
    
    .services-intro h2 {
     font-size: 2.5rem;
-    color: #e43f5a; /* Accent color */
+    color: #f12446; /* Accent color */
     margin-bottom: 20px;
    }
    
@@ -550,18 +550,18 @@
    .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #e43f5a; /* Accent color */
+    color: #f12446; /* Accent color */
    }
    
    .service-card p {
     font-size: 1rem;
-    color: #ccc;
+    color: #ddd;
     margin-bottom: 15px;
    }
    
    .service-card a {
     font-size: 1rem;
-    color: #e43f5a;
+    color: #f12446;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -608,130 +608,66 @@
     }
    }
    
-   /* General Section Styling */
-/* .portfolio-section {
-  scroll-snap-align: start;
-  background-color: #121212;
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  color: #f05454;
-  margin-bottom: 10px;
-}
-
-.section-description {
-  font-size: 1rem;
-  color: #b5b5b5;
-  margin-bottom: 40px;
-}
-
-.portfolio-section {
-  background-color: #121212;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  color: #f05454;
-  margin-bottom: 10px;
-}
-
-.section-description {
-  font-size: 1rem;
-  color: #b5b5b5;
-  margin-bottom: 20px;
-} */
-
-/* Horizontal Scrolling Container */
-/* .portfolio-container {
-  display: flex;
-  height: 80%;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  gap: 20px;
-  padding: 0 10vw;
-}
-
-.project-card {
-  flex: 0 0 80%;
-  background-color: #1c1c1c;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
+.gallery {
   position: relative;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.project-card img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
+  height: 100%;
+  padding: 50px 0;
+  overflow: hidden;
+  background-color: #121212;
 }
 
-.project-card h3 {
-  font-size: 1.5rem;
-  color: #f05454;
-  margin: 15px 0 10px;
+.projects {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-.project-card p {
-  font-size: 0.9rem;
-  color: #b5b5b5;
-  margin-bottom: 15px;
+.project {
+  flex: 0 0 100%;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  min-width: 320px;
+  max-height: 500px; /* Fixed height for uniformity */
+  display: flex; /* Enables centering */
+  flex-direction: column;
+  justify-content: center; /* Vertically centers content */
+  align-items: center; /* Horizontally centers content */
+  border-radius: 10px; /* Optional: rounded edges */
 }
 
-.project-card .btn {
-  background-color: #f05454;
+.project img {
+  max-width: 80%; /* Prevents image from stretching too wide */
+  max-height: 80%; /* Prevents image from exceeding container height */
+  object-fit: cover; /* Ensures image aspect ratio is maintained */
+  border-radius: 40px; /* Optional: matches the container's border radius */
+}
+
+.project.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.info {
+  margin-top: -50px;
+  font-size: 2em;
+}
+
+.info p {
+  font-size: .7em;
+}
+
+button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  border: none;
+  background-color: #1f1f1f;
   color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px #000000;
   transition: background-color 0.3s;
 }
-
-.project-card .btn:hover {
-  background-color: #d43d3d;
-} */
-
-/* Project in Focus (enlarge effect) */
-/* .project-card:focus {
-  transform: scale(1.1);
-  opacity: 1;
-}
-
-.project-card:not(:focus) {
-  opacity: 0.6;
-  transform: scale(0.9);
-} */
-
-/* Hide Scrollbar */
-/* .portfolio-container::-webkit-scrollbar {
-  display: none;
-} */
-
-/* Responsiveness */
-/* @media (max-width: 768px) {
-  .portfolio-container {
-    padding: 0 5vw;
-  }
-
-  .project-card {
-    flex: 0 0 90%;
-  }
-
-  .project-card img {
-    height: 200px;
-  }
-} */
-
