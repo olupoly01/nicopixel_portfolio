@@ -163,7 +163,7 @@
     gap: 30px;
     min-height: 100vh;
     width: 100%;
-    padding: 50px 20px;
+    padding: 30px 20px;
     position: relative;
     flex-wrap: wrap;
    }
@@ -258,11 +258,11 @@
     }
 
     .hero{
-      padding: 50px 25px;
+      padding: 0 25px;
     }
 
     .content {
-     margin-top: 50px;
+     margin-top: 60px;
      max-width: 470px;
      min-width: 350px;
      text-align: center;
@@ -612,7 +612,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 50px 0;
+  padding: 100px 0;
   overflow: hidden;
   background-color: #121212;
 }
@@ -629,7 +629,7 @@
   transition: all 0.5s ease-in-out;
   text-align: center;
   min-width: 320px;
-  max-height: 500px; /* Fixed height for uniformity */
+  max-height: 450px; /* Fixed height for uniformity */
   display: flex; /* Enables centering */
   flex-direction: column;
   justify-content: center; /* Vertically centers content */
@@ -638,8 +638,8 @@
 }
 
 .project img {
-  max-width: 80%; /* Prevents image from stretching too wide */
-  max-height: 80%; /* Prevents image from exceeding container height */
+  max-width: 90%; /* Prevents image from stretching too wide */
+  max-height: 90%; /* Prevents image from exceeding container height */
   object-fit: cover; /* Ensures image aspect ratio is maintained */
   border-radius: 40px; /* Optional: matches the container's border radius */
 }
@@ -658,9 +658,9 @@
   font-size: .7em;
 }
 
-button {
+.button {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   padding: 15px 30px;
   border: none;
   background-color: #1f1f1f;
