@@ -9,7 +9,7 @@
 
 :root[data-theme="light"] {
   --primary-color: #ffffff;
-  --secondary-color: #F5F5F596;
+  --secondary-color: #dddddd;
   --background-color: #CCCCCC;
   --text-color: #121212;
   --accent-color: #f12446;
