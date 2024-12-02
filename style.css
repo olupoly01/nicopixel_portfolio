@@ -42,7 +42,7 @@ header {
   top: 0;
   left: 0;
   z-index: 10;
-  padding: 0rem 1rem; /* Add some padding for better layout */
+  padding: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
