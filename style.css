@@ -13,6 +13,7 @@
   --background-color: #CCCCCC;
   --text-color: #121212;
   --accent-color: #f12446;
+  --header-bg: #dddddd80;
 }
 
 :root[data-theme="dark"] {
@@ -21,6 +22,7 @@
   --background-color: #121212;
   --text-color: #FFFFFF;
   --accent-color: #f12446;
+  --header-bg: #12121280;
 }
 
 body {
@@ -33,11 +35,15 @@ body {
 /* Header and Nav Styles */
 header {
   width: 100%;
-  background-color: var(--background-color);
+  background-color: var(--header-bg); /* Semi-transparent black */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
+  padding: 0rem 1rem; /* Add some padding for better layout */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
 nav {
