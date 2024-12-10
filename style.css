@@ -48,7 +48,6 @@ header {
   left: 0;
   z-index: 10;
   padding: 0; /* Add some padding for better layout */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
 nav {
@@ -75,11 +74,29 @@ nav {
   color: var(--text-color);
   text-decoration: none;
   font-size: 20px;
-  transition: color 0.3s;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
   color: var(--accent-color);
+}
+
+/* Hover Underline Effect */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  left: 50%;
+  bottom: -2px;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 /* Theme Toggle Button */
@@ -99,6 +116,10 @@ nav {
 .theme-toggle i {
   color: var(--text-color);
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle i:hover{
+  color: var(--accent-color);
 }
 
 .theme-toggle .fa-sun {
@@ -214,7 +235,6 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
@@ -624,7 +644,8 @@ strong {
 /* Service Card */
 .service-card {
   background-color: var(--secondary-color);
-  /* Darker card background */
+  position: relative;
+  text-align: center;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
@@ -634,6 +655,17 @@ strong {
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover .icon {
+  transform: scale(1.1);
 }
 
 .service-card h3 {
@@ -700,10 +732,12 @@ strong {
 }
 
 .gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   width: 100%;
-  height: 100%;
-  padding: 100px 0;
+  height: 90vh;
   overflow: hidden;
   background-color: var(--background-color);
 }
@@ -778,10 +812,11 @@ strong {
   color: var(--button-hover);
 }
 .contact-container-wrapper{
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border: none;
 }
 .contact-container {
@@ -791,7 +826,7 @@ strong {
   width: 90%;
   max-width: 600px;
   border: none;
-  box-shadow: 15px 15px 26px #000000;
+  box-shadow: 15px 15px 26px #6d6d6d;
 }
 .contact-container h2 {
   margin-bottom: 20px;
@@ -847,4 +882,24 @@ strong {
 .contact-container button:hover {
   background-color: var(--accent-color);
   color: var(--button-hover);
+}
+/* Footer */
+footer {
+  background-color:var(--text-color);
+  color:var(--background-color);
+  text-align:center;
+  padding:2rem 1rem;
+}
+footer p {
+  font-size:1rem;
+}
+footer a {
+  color:var(--accent-color);
+  text-decoration:none;
+  font-weight:bold;
+  margin-left:5px;
+  border: none;
+}
+footer a:hover {
+  text-decoration:underline;
 }
