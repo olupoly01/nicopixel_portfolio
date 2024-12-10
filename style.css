@@ -13,6 +13,7 @@
   --background-color: #eeeeee;
   --text-color: #121212;
   --button-color: #ececec;
+  --button-hover: #ffffff;
   --accent-color: #f12446;
   --header-bg: #eeeeeee;
   --placeholder-color: #777777;
@@ -774,6 +775,7 @@ strong {
 }
 .button:hover {
   background-color: var(--accent-color);
+  color: var(--button-hover);
 }
 .contact-container-wrapper{
   height: 90vh;
@@ -844,4 +846,5 @@ strong {
 }
 .contact-container button:hover {
   background-color: var(--accent-color);
+  color: var(--button-hover);
 }
