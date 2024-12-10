@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let autoSwitch = setInterval(nextProject, 4000);
   }
-//ThemeSwitch
-const themeToggle = document.querySelector(".theme-toggle");
+
+  const themeToggle = document.querySelector(".theme-toggle");
 const logo = document.getElementById("logo"); // Favicon (link element)
 const bodyLogos = document.querySelectorAll(".theme-logo"); // All other logo images
 const moonIcon = themeToggle.querySelector(".fa-moon");
@@ -94,7 +94,7 @@ if (!themeToggle || !logo || bodyLogos.length === 0) {
 }
 
 // Get saved theme from localStorage or default to light
-const savedTheme = localStorage.getItem("theme") || "light";
+const savedTheme = localStorage.getItem("theme") || "dark";
 
 // Apply the saved theme
 document.documentElement.setAttribute("data-theme", savedTheme);
@@ -138,5 +138,6 @@ themeToggle.addEventListener("click", () => {
         sunIcon.style.display = "none";
     }
 });
+
 });
 
